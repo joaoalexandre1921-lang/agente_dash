@@ -1,0 +1,11 @@
+{
+  "name": "mapa-empresas-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/news.test.mjs tests/assistant-server.test.mjs tests/socios.test.mjs tests/lusha.test.mjs",
+    "test:browser": "node tests/news-client.test.mjs",
+    "news:dry": "node scripts/fetch-news.mjs --dry",
+    "assistant:start": "node assistant-server.mjs"
+  }
+}

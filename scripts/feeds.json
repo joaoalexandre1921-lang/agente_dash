@@ -1,0 +1,797 @@
+[
+  {
+    "url": "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml",
+    "source": "Agência Brasil",
+    "theme": "Economia",
+    "region": "BR"
+  },
+  {
+    "url": "https://exame.com/feed/",
+    "source": "Exame",
+    "theme": "Empresas e negócios",
+    "region": "BR"
+  },
+  {
+    "url": "https://www.infomoney.com.br/feed/",
+    "source": "InfoMoney",
+    "theme": "Mercados e empresas",
+    "region": "BR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Agauchazh.clicrbs.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "GZH",
+    "theme": "Economia do RS",
+    "region": "RS"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aosul.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Jornal O Sul",
+    "theme": "Economia do RS",
+    "region": "RS"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Acorreiodopovo.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Correio do Povo",
+    "theme": "Economia do RS",
+    "region": "RS"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ajornaldocomercio.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Jornal do Comércio",
+    "theme": "Economia e negócios do RS",
+    "region": "RS"
+  },
+  {
+    "url": "https://poa24horas.com.br/feed/",
+    "source": "Porto Alegre 24 Horas",
+    "theme": "Empresas e economia local",
+    "region": "RS"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Afecomercio-rs.org.br&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Fecomércio-RS",
+    "theme": "Comércio e serviços",
+    "region": "RS",
+    "trusted": true
+  },
+  {
+    "url": "https://federasul.com.br/feed/",
+    "source": "Federasul",
+    "theme": "Empresariado gaúcho",
+    "region": "RS",
+    "trusted": true
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Afiergs.org.br&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "FIERGS",
+    "theme": "Indústria do RS",
+    "region": "RS",
+    "trusted": true
+  },
+  {
+    "url": "https://sulpetro.org.br/noticias/",
+    "source": "Sulpetro",
+    "theme": "Combustíveis e energia",
+    "region": "RS",
+    "trusted": true,
+    "format": "html"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ainternetsul.org.br&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "InternetSul",
+    "theme": "Tecnologia e conectividade",
+    "region": "RS",
+    "trusted": true
+  },
+  {
+    "url": "https://somoscooperativismo-rs.coop.br/conteudos/noticias/todas-noticias?cat_id=46",
+    "source": "Ocergs",
+    "theme": "Cooperativismo gaúcho",
+    "region": "RS",
+    "trusted": true,
+    "format": "html"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Afarsul.org.br&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Farsul",
+    "theme": "Agronegócio do RS",
+    "region": "RS",
+    "trusted": true
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Adiariodonordeste.verdesmares.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Diário do Nordeste",
+    "theme": "Economia do Ceará",
+    "region": "CE"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aopovo.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Povo",
+    "theme": "Economia do Ceará",
+    "region": "CE"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Atribunadoceara.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Tribuna do Ceará",
+    "theme": "Economia do Ceará",
+    "region": "CE"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aoestadoce.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Estado",
+    "theme": "Economia do Ceará",
+    "region": "CE"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Averdesmares.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Portal Verdes Mares",
+    "theme": "Economia do Ceará",
+    "region": "CE"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ajc.ne10.uol.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Jornal do Commercio",
+    "theme": "Economia de Pernambuco",
+    "region": "PE"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Adiariodepernambuco.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Diário de Pernambuco",
+    "theme": "Economia de Pernambuco",
+    "region": "PE"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Afolhape.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Folha de Pernambuco",
+    "theme": "Economia de Pernambuco",
+    "region": "PE"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aaquipe.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Aqui PE",
+    "theme": "Economia de Pernambuco",
+    "region": "PE"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aatarde.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "A Tarde",
+    "theme": "Economia da Bahia",
+    "region": "BA"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Acorreio24horas.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Correio",
+    "theme": "Economia da Bahia",
+    "region": "BA"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Atribunadabahia.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Tribuna da Bahia",
+    "theme": "Economia da Bahia",
+    "region": "BA"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Abahianoticias.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Bahia Notícias",
+    "theme": "Economia da Bahia",
+    "region": "BA"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aoliberal.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Liberal",
+    "theme": "Economia do Pará",
+    "region": "PA"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Adiariodopara.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Diário do Pará",
+    "theme": "Economia do Pará",
+    "region": "PA"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ajornalpessoal.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Jornal Pessoal",
+    "theme": "Economia do Pará",
+    "region": "PA"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Adol.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "DOL",
+    "theme": "Economia do Pará",
+    "region": "PA"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aacritica.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "A Crítica",
+    "theme": "Economia do Amazonas",
+    "region": "AM"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Adiariodoamazonas.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Diário do Amazonas",
+    "theme": "Economia do Amazonas",
+    "region": "AM"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aemtempo.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Em Tempo",
+    "theme": "Economia do Amazonas",
+    "region": "AM"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Acorreiodaparaiba.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Correio da Paraíba",
+    "theme": "Economia da Paraíba",
+    "region": "PB"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ajornaldaparaiba.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Jornal da Paraíba",
+    "theme": "Economia da Paraíba",
+    "region": "PB"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aonorte.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Norte",
+    "theme": "Economia da Paraíba",
+    "region": "PB"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Atribunadonorte.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Tribuna do Norte",
+    "theme": "Economia do Rio Grande do Norte",
+    "region": "RN"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ajornaldehoje.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Jornal de Hoje",
+    "theme": "Economia do Rio Grande do Norte",
+    "region": "RN"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Anovojornal.jor.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Novo Jornal",
+    "theme": "Economia do Rio Grande do Norte",
+    "region": "RN"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aoimparcial.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Imparcial",
+    "theme": "Economia do Maranhão",
+    "region": "MA"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aimirante.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Estado do Maranhão",
+    "theme": "Economia do Maranhão",
+    "region": "MA"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ajornalpequeno.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Jornal Pequeno",
+    "theme": "Economia do Maranhão",
+    "region": "MA"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aportalodia.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Dia",
+    "theme": "Economia do Piauí",
+    "region": "PI"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Adiariodopovo.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Diário do Povo do Piauí",
+    "theme": "Economia do Piauí",
+    "region": "PI"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Apiauinegocios.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Portal Piauí Negócios",
+    "theme": "Economia e negócios do Piauí",
+    "region": "PI"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Agazetaweb.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Gazeta de Alagoas",
+    "theme": "Economia de Alagoas",
+    "region": "AL"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Atribunahoje.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Tribuna de Alagoas",
+    "theme": "Economia de Alagoas",
+    "region": "AL"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ajornaldacidade.net%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Jornal da Cidade",
+    "theme": "Economia de Sergipe",
+    "region": "SE"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Acinform.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Cinform",
+    "theme": "Economia de Sergipe",
+    "region": "SE"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ajornaldotocantins.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Jornal do Tocantins",
+    "theme": "Economia do Tocantins",
+    "region": "TO"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Adiariodotocantins.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Diário do Tocantins",
+    "theme": "Economia do Tocantins",
+    "region": "TO"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Adiariodaamazonia.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Diário da Amazônia",
+    "theme": "Economia de Rondônia",
+    "region": "RO"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aaltomadeira.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Alto Madeira",
+    "theme": "Economia de Rondônia",
+    "region": "RO"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aagencia.ac.gov.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Agência de Notícias do Acre",
+    "theme": "Economia do Acre",
+    "region": "AC"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aac24horas.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Ac24horas",
+    "theme": "Economia do Acre",
+    "region": "AC"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ajornaldodia.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Jornal do Dia",
+    "theme": "Economia do Amapá",
+    "region": "AP"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aportalamapa.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Portal Amapá",
+    "theme": "Economia do Amapá",
+    "region": "AP"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Afolhabv.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Folha de Boa Vista",
+    "theme": "Economia de Roraima",
+    "region": "RR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Abrasilnorte.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Brasil Norte",
+    "theme": "Economia de Roraima",
+    "region": "RR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ainfomoney.com.br%20Minas%20Gerais%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "InfoMoney — Minas Gerais",
+    "theme": "Economia de Minas Gerais",
+    "region": "MG"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Adiariodocomercio.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Diário do Comércio",
+    "theme": "Economia de Minas Gerais",
+    "region": "MG"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Amercadocomum.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "MercadoComum",
+    "theme": "Economia de Minas Gerais",
+    "region": "MG"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aem.com.br%20Minas%20Gerais%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Estado de Minas",
+    "theme": "Economia de Minas Gerais",
+    "region": "MG"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Abrasilmineral.com.br&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Brasil Mineral",
+    "theme": "Mineração",
+    "region": "BR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Arevistaoempreiteiro.com.br&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Revista O Empreiteiro",
+    "theme": "Construção e engenharia",
+    "region": "BR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Atheagribiz.com&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "The Agribiz",
+    "theme": "Agronegócio",
+    "region": "BR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Amercadoeconsumo.com.br&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Mercado&Consumo",
+    "theme": "Varejo e consumo",
+    "region": "BR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Anoticiasagricolas.com.br&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Notícias Agrícolas",
+    "theme": "Agronegócio",
+    "region": "BR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Avalorinveste.globo.com&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Valor Investe",
+    "theme": "Investimentos",
+    "region": "BR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Afolha.uol.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Folha de S.Paulo",
+    "theme": "Economia de São Paulo",
+    "region": "SP"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aestadao.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Estadão",
+    "theme": "Economia de São Paulo",
+    "region": "SP"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ag1.globo.com/sp/sao-paulo%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "g1 SP",
+    "theme": "Economia de São Paulo",
+    "region": "SP"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Avalor.globo.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Valor Econômico",
+    "theme": "Economia de São Paulo",
+    "region": "SP"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ainfomoney.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "InfoMoney — São Paulo",
+    "theme": "Economia de São Paulo",
+    "region": "SP"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aexame.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Exame — São Paulo",
+    "theme": "Economia de São Paulo",
+    "region": "SP"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Acnnbrasil.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "CNN Brasil — São Paulo",
+    "theme": "Economia de São Paulo",
+    "region": "SP"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ag1.globo.com/sp/campinas-regiao%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "g1 Campinas",
+    "theme": "Economia de Campinas e região",
+    "region": "SP"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aatribuna.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "A Tribuna",
+    "theme": "Economia da Baixada Santista",
+    "region": "SP"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Adgabc.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Diário do Grande ABC",
+    "theme": "Economia do ABC Paulista",
+    "region": "SP"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aoglobo.globo.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Globo",
+    "theme": "Economia do Rio de Janeiro",
+    "region": "RJ"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ag1.globo.com/rj/rio-de-janeiro%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "g1 Rio",
+    "theme": "Economia do Rio de Janeiro",
+    "region": "RJ"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aextra.globo.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Extra",
+    "theme": "Economia do Rio de Janeiro",
+    "region": "RJ"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aodia.ig.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Dia — Rio de Janeiro",
+    "theme": "Economia do Rio de Janeiro",
+    "region": "RJ"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ajb.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Jornal do Brasil",
+    "theme": "Economia do Rio de Janeiro",
+    "region": "RJ"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Avejario.abril.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Veja Rio",
+    "theme": "Economia do Rio de Janeiro",
+    "region": "RJ"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Adiariodorio.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Diário do Rio",
+    "theme": "Economia do Rio de Janeiro",
+    "region": "RJ"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Amonitormercantil.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Monitor Mercantil",
+    "theme": "Economia do Rio de Janeiro",
+    "region": "RJ"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aofluminense.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Fluminense",
+    "theme": "Economia de Niterói e região",
+    "region": "RJ"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aosaogoncalo.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O São Gonçalo",
+    "theme": "Economia de São Gonçalo e região",
+    "region": "RJ"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aagazeta.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "A Gazeta",
+    "theme": "Economia do Espírito Santo",
+    "region": "ES"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Afolhavitoria.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Folha Vitória",
+    "theme": "Economia do Espírito Santo",
+    "region": "ES"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Atribunaonline.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Tribuna Online",
+    "theme": "Economia do Espírito Santo",
+    "region": "ES"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ag1.globo.com/es/espirito-santo%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "g1 ES",
+    "theme": "Economia do Espírito Santo",
+    "region": "ES"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aeshoje.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "ES Hoje",
+    "theme": "Economia do Espírito Santo",
+    "region": "ES"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aseculodiario.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Século Diário",
+    "theme": "Economia do Espírito Santo",
+    "region": "ES"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aesbrasil.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "ES Brasil",
+    "theme": "Economia do Espírito Santo",
+    "region": "ES"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aes360.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "ES360",
+    "theme": "Economia do Espírito Santo",
+    "region": "ES"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aaquinoticias.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Aqui Notícias",
+    "theme": "Economia do Sul do Espírito Santo",
+    "region": "ES"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aportal27.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Portal 27",
+    "theme": "Economia do Sul do Espírito Santo",
+    "region": "ES"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Acorreiobraziliense.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Correio Braziliense",
+    "theme": "Economia do Distrito Federal",
+    "region": "DF"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ametropoles.com/distrito-federal%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Metrópoles — Distrito Federal",
+    "theme": "Economia do Distrito Federal",
+    "region": "DF"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aopopular.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Popular",
+    "theme": "Economia de Goiás",
+    "region": "GO"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ajornalopcao.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Jornal Opção",
+    "theme": "Economia de Goiás",
+    "region": "GO"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Agazetadigital.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Gazeta Digital",
+    "theme": "Economia de Mato Grosso",
+    "region": "MT"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aolhardireto.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Olhar Direto",
+    "theme": "Economia de Mato Grosso",
+    "region": "MT"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Asonoticias.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Só Notícias",
+    "theme": "Economia de Mato Grosso",
+    "region": "MT"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Acampograndenews.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Campo Grande News",
+    "theme": "Economia de Mato Grosso do Sul",
+    "region": "MS"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Acorreiodoestado.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Correio do Estado",
+    "theme": "Economia de Mato Grosso do Sul",
+    "region": "MS"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Amidiamax.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Midiamax",
+    "theme": "Economia de Mato Grosso do Sul",
+    "region": "MS"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ansctotal.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "NSC Total",
+    "theme": "Economia de Santa Catarina",
+    "region": "SC"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Andmais.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "ND+",
+    "theme": "Economia de Santa Catarina",
+    "region": "SC"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ag1.globo.com/sc/santa-catarina%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "g1 SC",
+    "theme": "Economia de Santa Catarina",
+    "region": "SC"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ascc10.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "SCC10",
+    "theme": "Economia de Santa Catarina",
+    "region": "SC"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aeconomiasc.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Economia SC",
+    "theme": "Economia de Santa Catarina",
+    "region": "SC"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Adiarinho.net%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Diarinho",
+    "theme": "Economia do litoral catarinense",
+    "region": "SC"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aocp.news%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "OCP News",
+    "theme": "Economia do Norte de Santa Catarina",
+    "region": "SC"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aomunicipio.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Município",
+    "theme": "Economia de Brusque e região",
+    "region": "SC"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aclicrdc.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "ClicRDC",
+    "theme": "Economia do Oeste de Santa Catarina",
+    "region": "SC"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aengeplus.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Engeplus",
+    "theme": "Economia do Sul de Santa Catarina",
+    "region": "SC"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Agazetadopovo.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Gazeta do Povo",
+    "theme": "Economia do Paraná",
+    "region": "PR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Ag1.globo.com/pr/parana%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "g1 PR",
+    "theme": "Economia do Paraná",
+    "region": "PR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Atribunapr.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Tribuna do Paraná",
+    "theme": "Economia do Paraná",
+    "region": "PR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Abemparana.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Bem Paraná",
+    "theme": "Economia do Paraná",
+    "region": "PR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Abandab.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Banda B",
+    "theme": "Economia do Paraná",
+    "region": "PR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aric.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "RIC",
+    "theme": "Economia do Paraná",
+    "region": "PR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aplural.jor.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Plural",
+    "theme": "Economia do Paraná",
+    "region": "PR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Afolhadelondrina.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "Folha de Londrina",
+    "theme": "Economia do Norte do Paraná",
+    "region": "PR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Aodiariodemaringa.com.br%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "O Diário de Maringá",
+    "theme": "Economia de Maringá e região",
+    "region": "PR"
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=site%3Acatve.com%20%28economia%20OR%20empresas%20OR%20negocios%20OR%20industria%20OR%20investimento%20OR%20agro%20OR%20infraestrutura%20OR%20mercado%29&hl=pt-BR&gl=BR&ceid=BR%3Apt-419",
+    "source": "CATVE",
+    "theme": "Economia do Oeste do Paraná",
+    "region": "PR"
+  }
+]
