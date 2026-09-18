@@ -80,13 +80,15 @@ function createLushaService({
         signal: controller.signal,
       });
       const payload = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(`lusha_http_${response.status}`);
       // LUSHA_DEBUG=1 no ambiente imprime a resposta crua nos logs do Render
-      // (nunca vai para o navegador) -- use uma vez para confirmar o nome
-      // exato do campo de LinkedIn e depois desligue a variavel.
+      // (nunca vai para o navegador) -- inclusive em caso de erro, para
+      // conseguirmos ver a mensagem exata que o Lusha devolve. Use uma vez
+      // para confirmar o formato certo do corpo da requisicao e depois
+      // desligue a variavel.
       if (process.env.LUSHA_DEBUG === '1') {
-        console.log('lusha_raw_response', JSON.stringify(payload));
+        console.log('lusha_raw_response', response.status, JSON.stringify(payload));
       }
+      if (!response.ok) throw new Error(`lusha_http_${response.status}`);
       return payload;
     } finally {
       clearTimeout(timer);
