@@ -68,6 +68,10 @@ function extractLinkedinUrl(payload) {
 // generico. Devolvendo o nome encontrado, a interface consegue mostrar qual
 // empresa foi de fato usada, para o usuario confirmar visualmente antes de
 // confiar no link.
+// A localizacao (results[].location.{city,stateCode}) e um irmao do "name" no
+// mesmo nivel do objeto da empresa -- usamos a mesma tecnica de "carregar pra
+// cima" enquanto a recursao volta, ate a chamada que efetivamente achou a URL
+// do LinkedIn (que fica um nivel abaixo, dentro de socialLinks).
 function extractCompanyMatch(payload) {
   function walk(node) {
     if (Array.isArray(node)) {
@@ -82,15 +86,19 @@ function extractCompanyMatch(payload) {
         if (typeof value === 'string' && LINKEDIN_URL_RE.test(value)) {
           const match = value.match(LINKEDIN_URL_RE);
           const name = typeof node.name === 'string' ? node.name : null;
-          return { name, linkedinUrl: match[0] };
+          return { name, stateCode: null, city: null, linkedinUrl: match[0] };
         }
       }
       const candidateName = typeof node.name === 'string' ? node.name : null;
+      const candidateStateCode = typeof node.location?.stateCode === 'string' ? node.location.stateCode : null;
+      const candidateCity = typeof node.location?.city === 'string' ? node.location.city : null;
       for (const value of Object.values(node)) {
         if (value && typeof value === 'object') {
           const found = walk(value);
           if (found) {
             if (!found.name && candidateName) found.name = candidateName;
+            if (!found.stateCode && candidateStateCode) found.stateCode = candidateStateCode;
+            if (!found.city && candidateCity) found.city = candidateCity;
             return found;
           }
         }
@@ -98,7 +106,45 @@ function extractCompanyMatch(payload) {
     }
     return null;
   }
-  return walk(payload) || { name: null, linkedinUrl: null };
+  return walk(payload) || { name: null, stateCode: null, city: null, linkedinUrl: null };
+}
+
+// Compara o nome buscado com o nome que o Lusha devolveu, pra sinalizar
+// matches "genericos" (ex.: buscamos "ArcelorMittal Artefatos de Arame" e o
+// Lusha devolve uma empresa qualquer de "Artefatos de Arame" sem nenhuma
+// relacao). So contar sobreposicao de palavras nao basta: "ARCELORMITTAL
+// ARTEFATOS ARAME" e "COMPOARTE ARTEFATOS ARAME" compartilham 2 de 3
+// palavras, mas sao empresas diferentes -- o termo do ramo (ARTEFATOS ARAME)
+// e generico o bastante pra aparecer em varias razoes sociais. Por isso o
+// primeiro token normalizado (que na razao social BR costuma ser o nome
+// fantasia/marca) tem que aparecer nos dois lados para considerar
+// relacionado; sem esse "ancora" comum, exige uma sobreposicao bem alta
+// (Jaccard) pra aceitar mesmo assim.
+function nameLooksRelated(nomeOriginal, nomeEncontrado) {
+  const aTokens = normalizeCompanyName(nomeOriginal).split(' ').filter(w => w.length >= 3);
+  const bTokens = normalizeCompanyName(nomeEncontrado).split(' ').filter(w => w.length >= 3);
+  if (!aTokens.length || !bTokens.length) return null; // sem base suficiente pra comparar
+  const aSet = new Set(aTokens);
+  const bSet = new Set(bTokens);
+  if (bSet.has(aTokens[0]) || aSet.has(bTokens[0])) return true;
+  const union = new Set([...aSet, ...bSet]);
+  let shared = 0;
+  for (const w of aSet) if (bSet.has(w)) shared += 1;
+  return shared / union.size >= 0.6;
+}
+
+// Confianca do match = combinacao do nome (nameLooksRelated) com a UF
+// cadastrada na nossa base (estado) vs a UF que o Lusha devolveu
+// (match.stateCode). "baixa" so quando os dois sinais divergem ao mesmo
+// tempo -- e o caso mais forte de "achou a empresa errada".
+function matchConfidence({ nomeOriginal, estado, match }) {
+  const nameOk = nameLooksRelated(nomeOriginal, match.name);
+  const ufEsperada = String(estado || '').trim().toUpperCase();
+  const ufEncontrada = String(match.stateCode || '').trim().toUpperCase();
+  const regionOk = ufEsperada && ufEncontrada ? ufEsperada === ufEncontrada : null;
+  if (nameOk === false && regionOk === false) return 'baixa';
+  if (nameOk !== false && regionOk !== false && (nameOk === true || regionOk === true)) return 'alta';
+  return 'media';
 }
 
 function createLushaService({
@@ -135,23 +181,29 @@ function createLushaService({
     }
   }
 
+  function toResult(digits, hit, cached) {
+    return {
+      cnpj: digits,
+      linkedinUrl: hit.linkedinUrl,
+      companyName: hit.companyName,
+      companyLocation: hit.companyLocation,
+      confidence: hit.confidence,
+      cached,
+    };
+  }
+
   // Estrategia em cascata, da mais precisa a mais ampla: dominio do site (se
   // disponivel) -> nome normalizado. CNPJ nao e usado na consulta ao Lusha
   // (a API deles nao busca por documento brasileiro) -- serve so como chave
-  // de cache e de retorno.
-  async function findLinkedin({ cnpj, nome, dominio }) {
+  // de cache e de retorno. "estado" (UF cadastrada na nossa base) e opcional
+  // e so entra no calculo de confianca do match, nunca na propria consulta.
+  async function findLinkedin({ cnpj, nome, dominio, estado }) {
     if (!apiKey) throw new Error('lusha_not_configured');
     const digits = String(cnpj || '').replace(/\D/g, '');
     if (digits.length !== 14) throw new Error('invalid_cnpj');
 
-    if (cache.has(digits)) {
-      const hit = cache.get(digits);
-      return { cnpj: digits, linkedinUrl: hit.linkedinUrl, companyName: hit.companyName, cached: true };
-    }
-    if (pending.has(digits)) {
-      const hit = await pending.get(digits);
-      return { cnpj: digits, linkedinUrl: hit.linkedinUrl, companyName: hit.companyName, cached: true };
-    }
+    if (cache.has(digits)) return toResult(digits, cache.get(digits), true);
+    if (pending.has(digits)) return toResult(digits, await pending.get(digits), true);
 
     const attempts = [];
     if (dominio) attempts.push({ domain: String(dominio).trim() });
@@ -164,19 +216,23 @@ function createLushaService({
         try {
           const payload = await callSearchAndEnrich(query);
           const match = extractCompanyMatch(payload);
-          if (match.linkedinUrl) return { linkedinUrl: match.linkedinUrl, companyName: match.name };
+          if (match.linkedinUrl) {
+            const companyLocation = [match.city, match.stateCode].filter(Boolean).join(', ') || null;
+            const confidence = matchConfidence({ nomeOriginal: nome, estado, match });
+            return { linkedinUrl: match.linkedinUrl, companyName: match.name, companyLocation, confidence };
+          }
         } catch (error) {
           console.error('lusha_attempt_error', error?.message || error);
         }
       }
-      return { linkedinUrl: null, companyName: null };
+      return { linkedinUrl: null, companyName: null, companyLocation: null, confidence: null };
     })();
     pending.set(digits, request);
 
     try {
       const hit = await request;
       cache.set(digits, hit);
-      return { cnpj: digits, linkedinUrl: hit.linkedinUrl, companyName: hit.companyName, cached: false };
+      return toResult(digits, hit, false);
     } finally {
       pending.delete(digits);
     }
@@ -187,4 +243,4 @@ function createLushaService({
 
 const lushaService = createLushaService();
 
-export { createLushaService, normalizeCompanyName, extractLinkedinUrl, extractCompanyMatch, lushaService };
+export { createLushaService, normalizeCompanyName, extractLinkedinUrl, extractCompanyMatch, nameLooksRelated, matchConfidence, lushaService };

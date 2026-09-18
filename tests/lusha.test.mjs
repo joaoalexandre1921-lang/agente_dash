@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createLushaService, normalizeCompanyName, extractLinkedinUrl, extractCompanyMatch } from '../lusha.mjs';
+import { createLushaService, normalizeCompanyName, extractLinkedinUrl, extractCompanyMatch, nameLooksRelated, matchConfidence } from '../lusha.mjs';
 
 test('normaliza razao social removendo sufixos societarios e acentos', () => {
   assert.equal(normalizeCompanyName('MINERAÇÃO EXEMPLO S.A.'), 'MINERACAO EXEMPLO');
@@ -77,37 +77,74 @@ test('rejeita CNPJ invalido antes de chamar a API', async () => {
 // da requisicao NAO existe nesse endpoint (Lusha responde 400 "property
 // pages should not exist"); o extrator abaixo cobre o formato real:
 // results[].name + results[].socialLinks.linkedin.
-test('extrai nome e URL do formato real de resposta (results[].socialLinks.linkedin)', () => {
+test('extrai nome, UF/cidade e URL do formato real de resposta (results[].location + socialLinks.linkedin)', () => {
   const payload = {
     requestId: 'abc',
     results: [{
       id: 'v1.x',
       name: 'ArcelorMittal Brasil',
       domain: 'brasil.arcelormittal.com',
+      location: {city: 'Belo Horizonte', state: 'Minas Gerais', stateCode: 'MG', country: 'Brazil'},
       socialLinks: {linkedin: 'https://www.linkedin.com/company/arcelormittal-brasil', facebook: 'https://www.facebook.com/x'},
     }],
     billing: {creditsCharged: 2},
   };
   assert.deepEqual(extractCompanyMatch(payload), {
     name: 'ArcelorMittal Brasil',
+    stateCode: 'MG',
+    city: 'Belo Horizonte',
     linkedinUrl: 'https://www.linkedin.com/company/arcelormittal-brasil',
   });
 });
 
-test('findLinkedin devolve o nome da empresa que o Lusha casou, para conferencia visual', async () => {
+test('nameLooksRelated compara nomes normalizados por sobreposicao de palavras', () => {
+  assert.equal(nameLooksRelated('ArcelorMittal Brasil S.A.', 'ArcelorMittal Brasil'), true);
+  assert.equal(nameLooksRelated('ArcelorMittal Artefatos de Arame Ltda', 'Compoarte Artefatos De Arame'), false);
+  assert.equal(nameLooksRelated('', 'Qualquer Coisa'), null);
+});
+
+test('matchConfidence e baixa so quando nome E uf divergem ao mesmo tempo', () => {
+  assert.equal(matchConfidence({
+    nomeOriginal: 'ArcelorMittal Artefatos de Arame Ltda',
+    estado: 'MG',
+    match: {name: 'Compoarte Artefatos De Arame', stateCode: 'RS'},
+  }), 'baixa');
+  assert.equal(matchConfidence({
+    nomeOriginal: 'ArcelorMittal Brasil S.A.',
+    estado: 'MG',
+    match: {name: 'ArcelorMittal Brasil', stateCode: 'MG'},
+  }), 'alta');
+  // UF diverge mas o nome bate bem -- pode ser filial/matriz em outra cidade,
+  // nao e o caso "os dois sinais apontam problema", entao fica em duvida.
+  assert.equal(matchConfidence({
+    nomeOriginal: 'ArcelorMittal Brasil S.A.',
+    estado: 'SP',
+    match: {name: 'ArcelorMittal Brasil', stateCode: 'MG'},
+  }), 'media');
+  // Sem UF cadastrada na nossa base para comparar -- so o nome decide.
+  assert.equal(matchConfidence({
+    nomeOriginal: 'ArcelorMittal Brasil S.A.',
+    estado: '',
+    match: {name: 'ArcelorMittal Brasil', stateCode: 'MG'},
+  }), 'alta');
+});
+
+test('findLinkedin devolve nome, localizacao e confianca do match, para conferencia visual', async () => {
   const service = createLushaService({
     apiKey: 'fake-key',
     fetchImpl: async () => ({
       ok: true,
       async json() {
-        // Simula um match "generico": buscamos uma subsidiaria e o Lusha
-        // devolve uma empresa nao relacionada que so compartilha um termo
-        // generico da razao social apos a normalizacao de sufixos.
-        return {results: [{name: 'Compoarte Artefatos De Arame', socialLinks: {linkedin: 'https://www.linkedin.com/company/compoarte-artefatos-de-arame'}}]};
+        // Simula um match "generico": buscamos uma subsidiaria em MG e o
+        // Lusha devolve uma empresa nao relacionada no RS que so compartilha
+        // um termo generico da razao social apos a normalizacao de sufixos.
+        return {results: [{name: 'Compoarte Artefatos De Arame', location: {city: 'Bento Gonçalves', stateCode: 'RS'}, socialLinks: {linkedin: 'https://www.linkedin.com/company/compoarte-artefatos-de-arame'}}]};
       },
     }),
   });
-  const result = await service.findLinkedin({cnpj: '27498830000147', nome: 'ArcelorMittal Artefatos de Arame Ltda'});
+  const result = await service.findLinkedin({cnpj: '27498830000147', nome: 'ArcelorMittal Artefatos de Arame Ltda', estado: 'MG'});
   assert.equal(result.linkedinUrl, 'https://www.linkedin.com/company/compoarte-artefatos-de-arame');
   assert.equal(result.companyName, 'Compoarte Artefatos De Arame');
+  assert.equal(result.companyLocation, 'Bento Gonçalves, RS');
+  assert.equal(result.confidence, 'baixa');
 });

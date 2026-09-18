@@ -169,8 +169,9 @@ const server=http.createServer(async(req,res)=>{
     const cnpj=decodeURIComponent(requestUrl.pathname.slice('/api/linkedin/'.length));
     const nome=requestUrl.searchParams.get('nome')||'';
     const dominio=requestUrl.searchParams.get('dominio')||'';
+    const estado=requestUrl.searchParams.get('estado')||'';
     try{
-      const result=await lushaService.findLinkedin({cnpj,nome,dominio});
+      const result=await lushaService.findLinkedin({cnpj,nome,dominio,estado});
       return json(res,200,result,origin);
     }catch(error){
       const message=String(error?.message||'');
