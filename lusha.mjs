@@ -61,6 +61,46 @@ function extractLinkedinUrl(payload) {
   return null;
 }
 
+// Como extractLinkedinUrl, mas tambem devolve o nome da empresa que o Lusha
+// associou aquele link. A busca por nome e "fuzzy": para razoes sociais com
+// sufixo generico (ex.: "... Artefatos de Arame Ltda"), o Lusha pode casar
+// com uma empresa completamente diferente que so compartilha o termo
+// generico. Devolvendo o nome encontrado, a interface consegue mostrar qual
+// empresa foi de fato usada, para o usuario confirmar visualmente antes de
+// confiar no link.
+function extractCompanyMatch(payload) {
+  function walk(node) {
+    if (Array.isArray(node)) {
+      for (const item of node) {
+        const found = walk(item);
+        if (found) return found;
+      }
+      return null;
+    }
+    if (node && typeof node === 'object') {
+      for (const value of Object.values(node)) {
+        if (typeof value === 'string' && LINKEDIN_URL_RE.test(value)) {
+          const match = value.match(LINKEDIN_URL_RE);
+          const name = typeof node.name === 'string' ? node.name : null;
+          return { name, linkedinUrl: match[0] };
+        }
+      }
+      const candidateName = typeof node.name === 'string' ? node.name : null;
+      for (const value of Object.values(node)) {
+        if (value && typeof value === 'object') {
+          const found = walk(value);
+          if (found) {
+            if (!found.name && candidateName) found.name = candidateName;
+            return found;
+          }
+        }
+      }
+    }
+    return null;
+  }
+  return walk(payload) || { name: null, linkedinUrl: null };
+}
+
 function createLushaService({
   fetchImpl = globalThis.fetch,
   apiKey = process.env.LUSHA_API_KEY || '',
@@ -104,10 +144,13 @@ function createLushaService({
     const digits = String(cnpj || '').replace(/\D/g, '');
     if (digits.length !== 14) throw new Error('invalid_cnpj');
 
-    if (cache.has(digits)) return { cnpj: digits, linkedinUrl: cache.get(digits), cached: true };
+    if (cache.has(digits)) {
+      const hit = cache.get(digits);
+      return { cnpj: digits, linkedinUrl: hit.linkedinUrl, companyName: hit.companyName, cached: true };
+    }
     if (pending.has(digits)) {
-      const linkedinUrl = await pending.get(digits);
-      return { cnpj: digits, linkedinUrl, cached: true };
+      const hit = await pending.get(digits);
+      return { cnpj: digits, linkedinUrl: hit.linkedinUrl, companyName: hit.companyName, cached: true };
     }
 
     const attempts = [];
@@ -120,20 +163,20 @@ function createLushaService({
       for (const query of attempts) {
         try {
           const payload = await callSearchAndEnrich(query);
-          const linkedinUrl = extractLinkedinUrl(payload);
-          if (linkedinUrl) return linkedinUrl;
+          const match = extractCompanyMatch(payload);
+          if (match.linkedinUrl) return { linkedinUrl: match.linkedinUrl, companyName: match.name };
         } catch (error) {
           console.error('lusha_attempt_error', error?.message || error);
         }
       }
-      return null;
+      return { linkedinUrl: null, companyName: null };
     })();
     pending.set(digits, request);
 
     try {
-      const linkedinUrl = await request;
-      cache.set(digits, linkedinUrl);
-      return { cnpj: digits, linkedinUrl, cached: false };
+      const hit = await request;
+      cache.set(digits, hit);
+      return { cnpj: digits, linkedinUrl: hit.linkedinUrl, companyName: hit.companyName, cached: false };
     } finally {
       pending.delete(digits);
     }
@@ -144,4 +187,4 @@ function createLushaService({
 
 const lushaService = createLushaService();
 
-export { createLushaService, normalizeCompanyName, extractLinkedinUrl, lushaService };
+export { createLushaService, normalizeCompanyName, extractLinkedinUrl, extractCompanyMatch, lushaService };

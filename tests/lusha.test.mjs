@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createLushaService, normalizeCompanyName, extractLinkedinUrl } from '../lusha.mjs';
+import { createLushaService, normalizeCompanyName, extractLinkedinUrl, extractCompanyMatch } from '../lusha.mjs';
 
 test('normaliza razao social removendo sufixos societarios e acentos', () => {
   assert.equal(normalizeCompanyName('MINERAÇÃO EXEMPLO S.A.'), 'MINERACAO EXEMPLO');
@@ -70,4 +70,44 @@ test('rejeita CNPJ invalido antes de chamar a API', async () => {
     service.findLinkedin({cnpj: '123', nome: 'Vale'}),
     /invalid_cnpj/,
   );
+});
+
+// Formato real observado numa chamada de producao (endpoint nao documenta o
+// schema completo -- ver comentario em lusha.mjs). O campo "pages" no corpo
+// da requisicao NAO existe nesse endpoint (Lusha responde 400 "property
+// pages should not exist"); o extrator abaixo cobre o formato real:
+// results[].name + results[].socialLinks.linkedin.
+test('extrai nome e URL do formato real de resposta (results[].socialLinks.linkedin)', () => {
+  const payload = {
+    requestId: 'abc',
+    results: [{
+      id: 'v1.x',
+      name: 'ArcelorMittal Brasil',
+      domain: 'brasil.arcelormittal.com',
+      socialLinks: {linkedin: 'https://www.linkedin.com/company/arcelormittal-brasil', facebook: 'https://www.facebook.com/x'},
+    }],
+    billing: {creditsCharged: 2},
+  };
+  assert.deepEqual(extractCompanyMatch(payload), {
+    name: 'ArcelorMittal Brasil',
+    linkedinUrl: 'https://www.linkedin.com/company/arcelormittal-brasil',
+  });
+});
+
+test('findLinkedin devolve o nome da empresa que o Lusha casou, para conferencia visual', async () => {
+  const service = createLushaService({
+    apiKey: 'fake-key',
+    fetchImpl: async () => ({
+      ok: true,
+      async json() {
+        // Simula um match "generico": buscamos uma subsidiaria e o Lusha
+        // devolve uma empresa nao relacionada que so compartilha um termo
+        // generico da razao social apos a normalizacao de sufixos.
+        return {results: [{name: 'Compoarte Artefatos De Arame', socialLinks: {linkedin: 'https://www.linkedin.com/company/compoarte-artefatos-de-arame'}}]};
+      },
+    }),
+  });
+  const result = await service.findLinkedin({cnpj: '27498830000147', nome: 'ArcelorMittal Artefatos de Arame Ltda'});
+  assert.equal(result.linkedinUrl, 'https://www.linkedin.com/company/compoarte-artefatos-de-arame');
+  assert.equal(result.companyName, 'Compoarte Artefatos De Arame');
 });
