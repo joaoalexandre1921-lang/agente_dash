@@ -76,7 +76,7 @@ function createLushaService({
       const response = await fetchImpl(`${LUSHA_BASE_URL}${SEARCH_AND_ENRICH_PATH}`, {
         method: 'POST',
         headers: { api_key: apiKey, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ companies: [query], pages: { page: 0, size: 1 } }),
+        body: JSON.stringify({ companies: [query] }),
         signal: controller.signal,
       });
       const payload = await response.json().catch(() => ({}));
